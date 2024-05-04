@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Инициализация подключения к Spotify
-client_id = 'd67e87eab19146338c701fc80d622899'
-client_secret = '13dab873a5384a39a35ab8d22e6c77dd'
+client_id = ''
+client_secret = ''
 client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
