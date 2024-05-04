@@ -13,7 +13,7 @@ client_credentials_manager = SpotifyClientCredentials(client_id=client_id, clien
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
 # Получение данных о треке
-track_id = '3n3Ppam7vgaVa1iaRUc9Lp'
+track_id = '4k6Uh1HXdhtusDW5y8Gbvy'
 track_info = sp.track(track_id)
 print(track_info['name'], "by", track_info['artists'][0]['name'])
 
@@ -25,7 +25,7 @@ if preview_url:
     try:
         y, sr = librosa.load('track.mp3', sr=None)
         # Получение спектограммы
-        spectrogram = librosa.feature.melspectrogram(y, sr=sr, n_mels=128)
+        spectrogram = librosa.feature.melspectrogram(y=y, sr=sr, n_mels=128)
         log_spectrogram = librosa.power_to_db(spectrogram, ref=np.max)
         # Отображение спектограммы
         plt.figure(figsize=(10, 4))
